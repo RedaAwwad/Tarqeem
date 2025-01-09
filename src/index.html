@@ -1,0 +1,462 @@
+{{> _head }}
+
+<link href="vendor/videojs/video.min.css" rel="stylesheet" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/tobiasroeder/imagebox@1.3.1/dist/imagebox.min.css">
+</head>
+
+<body class="page">
+
+  <header class="hero zimam-page__header d-flex align-items-center">
+    <img class="hero__img" src="imgs/hero.webp" loading="lazy" alt="">
+    <div class="container position-relative" style="z-index: 4;">
+      <div class="zimam-page__content">
+        {{> _inner_navbar }}
+
+        <div class="row">
+          <div class="col-lg-7 mb-5 mb-lg-0">
+            <div class="hero-right-grid px-3 px-lg-0">
+              <h1 class="hero__title reveal">
+                <span>مشاريع وخدمات الحج </span>
+              </h1>
+              <h2 class="hero__subtitle reveal">ترقيم للحلول الإبداعية </h2>
+              <p class="zimam-page__text reveal" style="max-width: 600px;">
+                موسم حج 2024 - 1445 هـ
+              </p>
+            </div>
+          </div>
+          <div class="col-lg-5">
+            <div class="hero-left-grid px-3 px-lg-0">
+              <button data-source="https://youtu.be/fcafvQYQIsY" data-bs-toggle="modal" data-bs-target="#videoModal" class="btn btn__play reveal" title="تشغيل فديو الانترو">
+                <svg width="25" height="25" viewBox="0 0 29 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M5.72715 0.805825C2.92237 -0.78412 0.648438 0.518382 0.648438 3.71272V27.2855C0.648438 30.483 2.92237 31.7839 5.72715 30.1954L26.5761 18.3793C29.3818 16.7888 29.3818 14.2119 26.5761 12.6218L5.72715 0.805825Z" fill="white"/>
+                  </svg>
+              </button>
+              <h2 class="hero-left-grid__text reveal">تغطية مشروع الرقابة الميدانية على
+                بطاقة نسك في حج 1445 هـ</h2>
+              <img class="hero-left-grid__logo reveal" src="imgs/sela-logo.svg" alt="">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="py-4">
+    <div class="overflow-hidden">
+      <!-- features -->
+      <section class="section-space">
+        <div class="container-xl">
+          <div class="d-flex align-items-center justify-content-between mb-5">
+            <div class="d-inline-flex flex-column flex-md-row align-items-md-center gap-md-5">
+              <h2 class="heading__text reveal">
+                متخصصون في تقديم خدمات متعددة في مجالات التسويق وكتابة وإنتاج المحتوى وتنظيم الفعاليات
+              </h2>
+
+            </div>
+            <div class="slider__controls reveal">
+              <button id="nextFeatureNavigator" class="slider__control slider__control-next btn reveal" title="الميزة التالي">
+                <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 45 45" fill="none">
+                <circle cx="22.5" cy="22.5" r="21.5" stroke="currentColor" stroke-width="2"/>
+                <path d="M19 29.061C19.0002 28.8122 19.0938 28.5736 19.2601 28.3978L23.7952 23.5973C23.9325 23.452 24.0414 23.2796 24.1156 23.0898C24.1899 22.9 24.2282 22.6965 24.2282 22.491C24.2282 22.2856 24.1899 22.0821 24.1156 21.8923C24.0414 21.7025 23.9325 21.5301 23.7952 21.3848L19.266 16.5906C19.1045 16.4136 19.0151 16.1765 19.0171 15.9304C19.0192 15.6843 19.1124 15.4489 19.2768 15.2749C19.4412 15.1009 19.6636 15.0022 19.8961 15C20.1286 14.9979 20.3525 15.0925 20.5198 15.2635L25.049 20.0539C25.658 20.6998 26 21.5751 26 22.4876C26 23.4001 25.658 24.2754 25.049 24.9213L20.5139 29.7249C20.3899 29.8562 20.2318 29.9457 20.0598 29.9819C19.8877 30.0182 19.7094 29.9996 19.5473 29.9285C19.3852 29.8575 19.2467 29.7371 19.1493 29.5827C19.0519 29.4282 18.9999 29.2467 19 29.061Z" fill="currentColor"/>
+              </svg>
+              </button>
+              <button id="prevFeatureNavigator" class="slider__control slider__control-prev btn reveal" title="الميزة السابق">
+                <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 45 45" fill="none">
+                <circle cx="22.5" cy="22.5" r="21.5" stroke="currentColor" stroke-width="2"/>
+                <path d="M26 15.939C25.9998 16.1878 25.9062 16.4264 25.7399 16.6022L21.2048 21.4027C21.0675 21.548 20.9586 21.7204 20.8844 21.9102C20.8101 22.1 20.7718 22.3035 20.7718 22.509C20.7718 22.7144 20.8101 22.9179 20.8844 23.1077C20.9586 23.2975 21.0675 23.4699 21.2048 23.6152L25.734 28.4094C25.8955 28.5864 25.9849 28.8235 25.9829 29.0696C25.9808 29.3157 25.8876 29.5511 25.7232 29.7251C25.5588 29.8991 25.3364 29.9978 25.1039 30C24.8714 30.0021 24.6475 29.9075 24.4802 29.7365L19.951 24.9461C19.342 24.3002 19 23.4249 19 22.5124C19 21.5999 19.342 20.7246 19.951 20.0787L24.4861 15.2751C24.6101 15.1438 24.7682 15.0543 24.9402 15.0181C25.1123 14.9818 25.2906 15.0004 25.4527 15.0715C25.6148 15.1425 25.7533 15.2629 25.8507 15.4173C25.9481 15.5718 26.0001 15.7533 26 15.939Z" fill="currentColor"/>
+              </svg>
+              </button>
+            </div>
+          </div>
+          <div dir="rtl" class="swiper features-slider reveal">
+            <div class="swiper-wrapper">
+              {{#each items}}
+              <div class="swiper-slide">
+                <div class="feature-card">
+                  <div class="feature-card__icon">
+                    <svg width="4.19rem" height="4.19rem" viewBox="0 0 67 67" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M41.1766 62.0941H25.823C11.928 62.0941 5.99121 56.1574 5.99121 42.2623V26.9087C5.99121 13.0137 11.9279 7.0769 25.823 7.0769H36.0588C37.1079 7.0769 37.978 7.94694 37.978 8.99611C37.978 10.0453 37.1079 10.9153 36.0588 10.9153H25.823C14.0263 10.9153 9.82962 15.112 9.82962 26.9087V42.2623C9.82962 54.059 14.0263 58.2557 25.823 58.2557H41.1766C52.9734 58.2557 57.17 54.0591 57.17 42.2623V29.4676C57.17 28.4185 58.0401 27.5484 59.0892 27.5484C60.1384 27.5484 61.0084 28.4185 61.0084 29.4676V42.2623C61.0084 56.1574 55.0717 62.0941 41.1766 62.0941Z" fill="white"/>
+                      <path d="M43.3509 41.33H19.4547C19.2103 41.33 19.0122 41.1318 19.0122 40.8874V24.9567C19.0122 24.7123 19.2103 24.5142 19.4547 24.5142H43.3509C43.5953 24.5142 43.7934 24.7123 43.7934 24.9567V40.8874C43.7934 41.1318 43.5953 41.33 43.3509 41.33ZM19.8973 40.4449H42.9083V25.3992H19.8973V40.4449Z" fill="white"/>
+                      <path d="M31.403 27.6118C31.1586 27.6118 30.9604 27.4137 30.9604 27.1693V24.9567C30.9604 24.7123 31.1586 24.5142 31.403 24.5142C31.6474 24.5142 31.8455 24.7123 31.8455 24.9567V27.1693C31.8455 27.4137 31.6474 27.6118 31.403 27.6118Z" fill="white"/>
+                      <path d="M33.1728 29.3819H29.6326C29.466 29.3814 29.3138 29.2874 29.2388 29.1386C29.1628 28.9887 29.1782 28.8087 29.2786 28.6739L30.6062 26.9038C30.6898 26.7924 30.8209 26.7268 30.9602 26.7268H31.8452C31.9845 26.7268 32.1157 26.7924 32.1993 26.9038L33.5268 28.6739C33.6273 28.8087 33.6427 28.9887 33.5666 29.1385C33.4917 29.2873 33.3395 29.3814 33.1728 29.3819ZM30.5177 28.4969H32.2878L31.624 27.6119H31.1815L30.5177 28.4969Z" fill="white"/>
+                      <path d="M24.3224 27.6118C24.078 27.6118 23.8799 27.4137 23.8799 27.1693V24.9567C23.8799 24.7123 24.078 24.5142 24.3224 24.5142C24.5668 24.5142 24.7649 24.7123 24.7649 24.9567V27.1693C24.7649 27.4137 24.5668 27.6118 24.3224 27.6118Z" fill="white"/>
+                      <path d="M26.0927 29.3819H22.5526C22.3859 29.3814 22.2337 29.2874 22.1587 29.1386C22.0827 28.9887 22.0981 28.8087 22.1986 28.6739L23.5261 26.9038C23.6097 26.7924 23.7408 26.7268 23.8801 26.7268H24.7652C24.9044 26.7268 25.0356 26.7924 25.1192 26.9038L26.4467 28.6739C26.5472 28.8087 26.5626 28.9887 26.4866 29.1385C26.4116 29.2873 26.2594 29.3814 26.0927 29.3819ZM23.4376 28.4969H25.2077L24.5439 27.6119H24.1014L23.4376 28.4969Z" fill="white"/>
+                      <path d="M38.4831 27.6118C38.2387 27.6118 38.0405 27.4137 38.0405 27.1693V24.9567C38.0405 24.7123 38.2386 24.5142 38.4831 24.5142C38.7275 24.5142 38.9256 24.7123 38.9256 24.9567V27.1693C38.9256 27.4137 38.7275 27.6118 38.4831 27.6118Z" fill="white"/>
+                      <path d="M40.2534 29.3819H36.7132C36.5466 29.3814 36.3943 29.2874 36.3194 29.1386C36.2433 28.9887 36.2588 28.8087 36.3592 28.6739L37.6868 26.9038C37.7703 26.7924 37.9015 26.7268 38.0408 26.7268H38.9258C39.0651 26.7268 39.1963 26.7924 39.2798 26.9038L40.6074 28.6739C40.7078 28.8087 40.7232 28.9887 40.6472 29.1385C40.5722 29.2873 40.42 29.3814 40.2534 29.3819ZM37.5983 28.4969H39.3683L38.7046 27.6119H38.262L37.5983 28.4969Z" fill="white"/>
+                      <path d="M25.2075 36.0197H23.8799C22.9024 36.0197 22.1099 35.2272 22.1099 34.2496C22.1099 33.272 22.9024 32.4795 23.8799 32.4795H25.2075C25.4519 32.4795 25.65 32.6776 25.65 32.922V35.5771C25.65 35.8215 25.4519 36.0197 25.2075 36.0197ZM23.8799 33.3645C23.3911 33.3645 22.9949 33.7608 22.9949 34.2496C22.9949 34.7384 23.3912 35.1346 23.8799 35.1346H24.765V33.3645L23.8799 33.3645Z" fill="white"/>
+                      <path d="M27.8628 37.3474C27.7935 37.347 27.7253 37.3303 27.6636 37.2987L25.0085 35.9711C24.8597 35.8962 24.7656 35.7439 24.7651 35.5773V32.9222C24.7656 32.7555 24.8597 32.6033 25.0085 32.5283L27.6636 31.2008C27.8819 31.0908 28.148 31.1785 28.258 31.3968C28.2889 31.4582 28.3051 31.5259 28.3053 31.5946V36.9048C28.3056 37.0577 28.227 37.2 28.0973 37.281C28.0269 37.3246 27.9456 37.3476 27.8628 37.3474ZM25.6502 35.3029L27.4203 36.188V32.3115L25.6502 33.1965V35.3029Z" fill="white"/>
+                      <path d="M30.518 34.6922H29.633C29.3886 34.6922 29.1904 34.4941 29.1904 34.2497C29.1904 34.0052 29.3885 33.8071 29.633 33.8071H30.518C30.7624 33.8071 30.9605 34.0052 30.9605 34.2497C30.9605 34.4941 30.7624 34.6922 30.518 34.6922Z" fill="white"/>
+                      <path d="M29.6329 32.9221C29.4663 32.9216 29.3141 32.8276 29.2391 32.6788C29.1298 32.4612 29.2168 32.1962 29.4338 32.0858L30.3188 31.6432C30.5282 31.5172 30.8001 31.5849 30.9261 31.7943C31.0521 32.0037 30.9845 32.2756 30.7751 32.4016C30.7565 32.4128 30.7371 32.4226 30.7171 32.4309L29.832 32.8735C29.7708 32.9062 29.7023 32.923 29.6329 32.9221Z" fill="white"/>
+                      <path d="M30.5178 36.9047C30.4484 36.9056 30.3799 36.8888 30.3187 36.8561L29.4337 36.4135C29.2243 36.2875 29.1566 36.0156 29.2827 35.8062C29.3958 35.6183 29.6295 35.5415 29.8319 35.6259L30.717 36.0684C30.9339 36.1788 31.021 36.4438 30.9117 36.6614C30.8367 36.8102 30.6845 36.9042 30.5178 36.9047Z" fill="white"/>
+                      <path d="M23.88 37.7899C23.6356 37.7899 23.4375 37.5918 23.4375 37.3474V35.5773C23.4375 35.3329 23.6356 35.1348 23.88 35.1348C24.1244 35.1348 24.3225 35.3329 24.3225 35.5773V37.3474C24.3225 37.5918 24.1244 37.7899 23.88 37.7899Z" fill="white"/>
+                      <path d="M43.3509 43.5425H19.4547C19.2103 43.5425 19.0122 43.3444 19.0122 43.1C19.0122 42.8556 19.2103 42.6575 19.4547 42.6575H43.3509C43.5953 42.6575 43.7934 42.8556 43.7934 43.1C43.7934 43.3444 43.5953 43.5425 43.3509 43.5425Z" fill="white"/>
+                      <path d="M32.7305 48.8527C32.4861 48.8527 32.2879 48.6546 32.2879 48.4102V41.3299H30.5179V48.4102C30.5179 48.6546 30.3197 48.8527 30.0753 48.8527C29.8309 48.8527 29.6328 48.6546 29.6328 48.4102V40.8873C29.6328 40.643 29.8309 40.4448 30.0753 40.4448H32.7305C32.9749 40.4448 33.173 40.6429 33.173 40.8873V48.4102C33.173 48.6546 32.9749 48.8527 32.7305 48.8527Z" fill="white"/>
+                      <path d="M30.0753 43.5425H26.9777C26.7333 43.5425 26.5352 43.3444 26.5352 43.1V40.8873C26.5352 40.643 26.7333 40.4448 26.9777 40.4448H30.0753C30.3197 40.4448 30.5178 40.6429 30.5178 40.8873V43.1C30.5178 43.3444 30.3197 43.5425 30.0753 43.5425ZM27.4202 42.6574H29.6328V41.3299H27.4202V42.6574Z" fill="white"/>
+                      <path d="M26.9777 43.5425H23.88C23.6356 43.5425 23.4375 43.3444 23.4375 43.1V40.8873C23.4375 40.643 23.6356 40.4448 23.88 40.4448H26.9777C27.2221 40.4448 27.4202 40.6429 27.4202 40.8873V43.1C27.4202 43.3444 27.2221 43.5425 26.9777 43.5425ZM24.3225 42.6574H26.5352V41.3299H24.3225V42.6574Z" fill="white"/>
+                      <path d="M23.88 43.5425H20.7824C20.538 43.5425 20.3398 43.3444 20.3398 43.1V40.8873C20.3398 40.643 20.538 40.4448 20.7824 40.4448H23.88C24.1244 40.4448 24.3225 40.6429 24.3225 40.8873V43.1C24.3225 43.3444 24.1244 43.5425 23.88 43.5425ZM21.2249 42.6574H23.4375V41.3299H21.2249V42.6574Z" fill="white"/>
+                      <path d="M42.0231 43.5425H38.9254C38.681 43.5425 38.4829 43.3444 38.4829 43.1V40.8873C38.4829 40.643 38.681 40.4448 38.9254 40.4448H42.0231C42.2675 40.4448 42.4656 40.6429 42.4656 40.8873V43.1C42.4656 43.3444 42.2675 43.5425 42.0231 43.5425ZM39.368 42.6574H41.5806V41.3299H39.368V42.6574Z" fill="white"/>
+                      <path d="M38.9254 43.5425H35.8278C35.5834 43.5425 35.3853 43.3444 35.3853 43.1V40.8873C35.3853 40.643 35.5834 40.4448 35.8278 40.4448H38.9254C39.1698 40.4448 39.3679 40.6429 39.3679 40.8873V43.1C39.3679 43.3444 39.1698 43.5425 38.9254 43.5425ZM36.2703 42.6574H38.4829V41.3299H36.2703V42.6574Z" fill="white"/>
+                      <path d="M35.8283 43.5425H32.7306C32.4862 43.5425 32.2881 43.3444 32.2881 43.1V40.8873C32.2881 40.643 32.4862 40.4448 32.7306 40.4448H35.8283C36.0726 40.4448 36.2708 40.6429 36.2708 40.8873V43.1C36.2708 43.3444 36.0727 43.5425 35.8283 43.5425ZM33.1731 42.6574H35.3857V41.3299H33.1731V42.6574Z" fill="white"/>
+                      <path d="M39.8107 32.4795H33.6154C33.371 32.4795 33.1729 32.2814 33.1729 32.037C33.1729 31.7926 33.371 31.5945 33.6154 31.5945H39.8107C40.0551 31.5945 40.2532 31.7926 40.2532 32.037C40.2532 32.2814 40.0551 32.4795 39.8107 32.4795Z" fill="white"/>
+                      <path d="M39.8107 34.6922H33.6154C33.371 34.6922 33.1729 34.4941 33.1729 34.2497C33.1729 34.0052 33.371 33.8071 33.6154 33.8071H39.8107C40.0551 33.8071 40.2532 34.0052 40.2532 34.2497C40.2532 34.4941 40.0551 34.6922 39.8107 34.6922Z" fill="white"/>
+                      <path d="M37.1555 36.9048H33.6154C33.371 36.9048 33.1729 36.7067 33.1729 36.4623C33.1729 36.2179 33.371 36.0198 33.6154 36.0198H37.1555C37.3999 36.0198 37.5981 36.2179 37.5981 36.4623C37.5981 36.7067 37.4 36.9048 37.1555 36.9048Z" fill="white"/>
+                      <path d="M45.2698 19.0425C44.5279 18.3006 44.5279 17.0702 45.2698 16.3283L56.1264 5.47165C56.6693 4.92882 57.5016 4.74787 58.2073 5.05548C58.913 5.36309 59.3835 6.05068 59.4015 6.82874V14.0665C59.4015 15.116 58.533 15.9845 57.4835 15.9845C56.4341 15.9845 55.5655 15.116 55.5655 14.0665V11.4609L47.9839 19.0425C47.2421 19.7844 46.0117 19.7844 45.2698 19.0425Z" fill="white"/>
+                      <path d="M48.8886 8.18574C48.5448 7.84195 48.3276 7.37149 48.3276 6.82865C48.3276 5.77918 49.1962 4.91064 50.2456 4.91064H57.4834C58.5329 4.91064 59.4014 5.77918 59.4014 6.82865C59.4014 7.87813 58.5329 8.74666 57.4834 8.74666H50.2456C49.7028 8.74666 49.2324 8.52953 48.8886 8.18574Z" fill="white"/>
+                      </svg>
+                  </div>
+                  <div class="feature-card__body">
+                    <h2 class="feature-card__title">إدارة الفعاليات
+                      والترفيه</h2>
+                      <p class="feature-card__text">نعمل على تخطيط وتسويق وإدارة الفعاليات، ونجذب الأفراد والمجتمعات ليعيشوا تجربة فريدة، من خلال الأنشطة الترفيهية والمعارض والمؤتمرات والندوات والحفلات وغيرها.
+                      </p>
+                  </div>
+                </div>
+              </div>
+              {{/each}}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- feature projects -->
+      <section class="section-space">
+        <div class="container-xl">
+          <div class="d-flex align-items-end justify-content-between mb-5">
+            <div class="d-inline-flex flex-column reveal">
+              <h2 class="heading__title reveal">أبرز المشاريع</h2>
+              <h2 class="heading__text reveal" style="max-width: 400px;">
+                تغطية مشروع الرقابة الميدانية على بطاقة نسك في موسم حج 1445 هـ
+              </h2>
+
+            </div>
+            <div class="d-flex flex-column align-items-end gap-3 reveal">
+              <span class="project__entity reveal">الجهة الشريكة</span>
+              <img class="project__entity-logo reveal" src="imgs/sela-logo.svg" alt="sela logo">
+            </div>
+          </div>
+
+          <div class="row">
+            {{#each gridItems}}
+            <div class="col-lg-4 reveal">
+              <div class="video-card">
+                <img class="video-card__img" src="imgs/image.png" alt="الفيلم الوثائقي">
+                <div class="video-card__body">
+                  <button data-source="https://youtu.be/fcafvQYQIsY" data-bs-toggle="modal" data-bs-target="#videoModal" class="btn video-card__icon" title="تشغيل الفديو">
+                    <svg width="1.2rem" height="1.2rem" viewBox="0 0 29 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M5.72715 0.805825C2.92237 -0.78412 0.648438 0.518382 0.648438 3.71272V27.2855C0.648438 30.483 2.92237 31.7839 5.72715 30.1954L26.5761 18.3793C29.3818 16.7888 29.3818 14.2119 26.5761 12.6218L5.72715 0.805825Z" fill="white"/>
+                      </svg>
+                  </button>
+                  <h2 class="video-card__title">الفيلم الوثائقي</h2>
+                </div>
+              </div>
+            </div>
+            {{/each}}
+          </div>
+        </div>
+      </section>
+
+      <section class="section-space">
+        <div class="container-xl">
+          <div class="d-flex align-items-end justify-content-between mb-5">
+            <div class="d-inline-flex flex-column reveal">
+              <h2 class="heading__text reveal" style="max-width: 400px;">
+                تغطية مشروع إدارة حشود قطار المشاعر المقدسة 1444 هـ
+              </h2>
+
+            </div>
+            <div class="d-flex flex-column align-items-end gap-3 reveal">
+              <span class="project__entity reveal">الجهة الشريكة</span>
+              <img style="width: 100px;" class="project__entity-logo reveal" src="imgs/al-yamama-logo.svg" alt="al-yamama logo">
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-12 mb-4 reveal">
+              <div class="video-card w-100">
+                <img class="video-card__img" src="imgs/image.png" alt="الفيلم الوثائقي">
+                <div class="video-card__body">
+                  <button data-source="https://youtu.be/fcafvQYQIsY" data-bs-toggle="modal" data-bs-target="#videoModal" class="btn video-card__icon" title="تشغيل الفديو">
+                    <svg width="1.2rem" height="1.2rem" viewBox="0 0 29 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M5.72715 0.805825C2.92237 -0.78412 0.648438 0.518382 0.648438 3.71272V27.2855C0.648438 30.483 2.92237 31.7839 5.72715 30.1954L26.5761 18.3793C29.3818 16.7888 29.3818 14.2119 26.5761 12.6218L5.72715 0.805825Z" fill="white"/>
+                      </svg>
+                  </button>
+                  <h2 class="video-card__title">الفيلم الوثائقي</h2>
+                </div>
+              </div>
+            </div>
+            {{#each items}}
+            <div class="col-lg-4 reveal">
+              <div class="img-card">
+                <img class="img-card__img" src="imgs/image.png" data-imagebox="single"
+                data-imagebox-src="/imgs/image.png" alt="image">
+              </div>
+            </div>
+            {{/each}}
+          </div>
+        </div>
+      </section>
+
+      <section class="section-space">
+        <div class="container-xl">
+          <div class="d-flex align-items-end justify-content-between mb-5">
+            <div class="d-inline-flex flex-column reveal">
+              <h2 class="heading__text reveal" style="max-width: 400px;">
+                مشارق | المحتوى الإبداعي 1444 هـ
+              </h2>
+
+            </div>
+            <div class="d-flex flex-column align-items-end gap-3 reveal">
+              <span class="project__entity reveal">الجهة الشريكة</span>
+              <img class="project__entity-logo reveal" src="imgs/mashariq-logo.svg" alt="mashariq logo">
+            </div>
+          </div>
+
+          <div class="row">
+            {{#each gridItems}}
+            <div class="col-lg-4 reveal">
+              <div class="video-card reveal">
+                <img class="video-card__img" src="imgs/image.png" alt="إشراقة جديدة">
+                <div class="video-card__body">
+                  <button data-source="https://youtu.be/fcafvQYQIsY" data-bs-toggle="modal" data-bs-target="#videoModal" class="btn video-card__icon" title="تشغيل الفديو">
+                    <svg width="1.2rem" height="1.2rem" viewBox="0 0 29 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M5.72715 0.805825C2.92237 -0.78412 0.648438 0.518382 0.648438 3.71272V27.2855C0.648438 30.483 2.92237 31.7839 5.72715 30.1954L26.5761 18.3793C29.3818 16.7888 29.3818 14.2119 26.5761 12.6218L5.72715 0.805825Z" fill="white"/>
+                      </svg>
+                  </button>
+                  <h2 class="video-card__title">إشراقة جديدة</h2>
+                </div>
+              </div>
+              <div class="py-4 reveal">
+                <img class="w-100" src="imgs/f-1.svg" alt="">
+              </div>
+            </div>
+            {{/each}}
+          </div>
+        </div>
+      </section>
+
+      <section class="section-space">
+        <div class="container-xl">
+          <div class="d-flex align-items-end justify-content-between mb-5">
+            <div class="d-inline-flex flex-column reveal">
+              <h2 class="heading__text reveal" style="max-width: 600px;">
+                فعاليات إستقبال وتوديع ضيوف الرحمن 1444 - 1445 هـ
+              </h2>
+
+            </div>
+            <div class="d-flex flex-column align-items-end gap-3 reveal">
+              <span class="project__entity reveal">الجهة الشريكة</span>
+              <img class="project__entity-logo reveal" src="imgs/mashariq-logo.svg" alt="mashariq logo">
+            </div>
+          </div>
+
+          <div class="row">
+            {{#each gridItems}}
+            <div class="col-lg-4 reveal">
+              <div class="video-card">
+                <img class="video-card__img" src="imgs/image.png" alt="فعاليات إستقبال الحجاج">
+                <div class="video-card__body">
+                  <button data-source="https://youtu.be/fcafvQYQIsY" data-bs-toggle="modal" data-bs-target="#videoModal" class="btn video-card__icon" title="تشغيل الفديو">
+                    <svg width="1.2rem" height="1.2rem" viewBox="0 0 29 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M5.72715 0.805825C2.92237 -0.78412 0.648438 0.518382 0.648438 3.71272V27.2855C0.648438 30.483 2.92237 31.7839 5.72715 30.1954L26.5761 18.3793C29.3818 16.7888 29.3818 14.2119 26.5761 12.6218L5.72715 0.805825Z" fill="white"/>
+                      </svg>
+                  </button>
+                  <h2 class="video-card__title">فعاليات إستقبال الحجاج</h2>
+                </div>
+              </div>
+            </div>
+            {{/each}}
+          </div>
+        </div>
+      </section>
+
+      <section class="section-space">
+        <div class="container-xl">
+          <div class="d-flex align-items-end justify-content-between mb-5">
+            <div class="d-inline-flex flex-column reveal">
+              <h2 class="heading__text reveal" style="max-width: 600px;">
+                محتوى مركز مكارم لإثراء تجربة ضيوف الرحمن  1445 هـ
+              </h2>
+
+            </div>
+            <div class="d-flex flex-column align-items-end gap-3 reveal">
+              <span class="project__entity reveal">الجهة الشريكة</span>
+              <img class="project__entity-logo reveal" src="imgs/mashariq-logo.svg" alt="mashariq logo">
+            </div>
+          </div>
+
+          <div class="row">
+            {{#each gridItems}}
+            <div class="col-lg-4 reveal">
+              <div class="video-card">
+                <img class="video-card__img" src="imgs/image.png" alt="معرض قصة الحج">
+                <div class="video-card__body">
+                  <button data-source="https://youtu.be/fcafvQYQIsY" data-bs-toggle="modal" data-bs-target="#videoModal" class="btn video-card__icon" title="تشغيل الفديو">
+                    <svg width="1.2rem" height="1.2rem" viewBox="0 0 29 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M5.72715 0.805825C2.92237 -0.78412 0.648438 0.518382 0.648438 3.71272V27.2855C0.648438 30.483 2.92237 31.7839 5.72715 30.1954L26.5761 18.3793C29.3818 16.7888 29.3818 14.2119 26.5761 12.6218L5.72715 0.805825Z" fill="white"/>
+                      </svg>
+                  </button>
+                  <h2 class="video-card__title">معرض قصة الحج</h2>
+                </div>
+              </div>
+            </div>
+            {{/each}}
+          </div>
+        </div>
+      </section>
+
+      <!-- before last -->
+      <section class="section-space">
+        <div class="container-xl">
+          <div class="d-flex align-items-end justify-content-between mb-5">
+            <div class="d-inline-flex flex-column reveal">
+              <h2 class="heading__text reveal" style="max-width: 600px;">
+                محتوى تسويقي لفنادق أساس الضيافة 1445 هـ
+              </h2>
+
+            </div>
+            <div class="d-flex flex-column align-items-end gap-3 reveal">
+              <span class="project__entity reveal">الجهة الشريكة</span>
+              <img style="width: 100px;" class="project__entity-logo reveal" src="imgs/al-yamama-logo.svg" alt="al-yamama logo">
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-12 mb-4 reveal">
+              <div class="video-card w-100">
+                <img class="video-card__img" src="imgs/image.png" alt="الفيلم الوثائقي">
+                <div class="video-card__body">
+                  <button data-source="https://youtu.be/fcafvQYQIsY" data-bs-toggle="modal" data-bs-target="#videoModal" class="btn video-card__icon" title="تشغيل الفديو">
+                    <svg width="1.2rem" height="1.2rem" viewBox="0 0 29 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M5.72715 0.805825C2.92237 -0.78412 0.648438 0.518382 0.648438 3.71272V27.2855C0.648438 30.483 2.92237 31.7839 5.72715 30.1954L26.5761 18.3793C29.3818 16.7888 29.3818 14.2119 26.5761 12.6218L5.72715 0.805825Z" fill="white"/>
+                      </svg>
+                  </button>
+                  <h2 class="video-card__title">الفيلم الوثائقي</h2>
+                </div>
+              </div>
+            </div>
+            {{#each items}}
+            <div class="col-lg-4 reveal">
+              <div class="img-card">
+                <img class="img-card__img" src="imgs/image.png" data-imagebox="single"
+                data-imagebox-src="/imgs/image.png" alt="image">
+              </div>
+            </div>
+            {{/each}}
+          </div>
+        </div>
+      </section>
+
+      <!-- last section -->
+      <section class="section-space">
+        <div class="container-xl">
+          <div class="d-flex align-items-end justify-content-between mb-5">
+            <div class="d-inline-flex flex-column reveal">
+              <h2 class="heading__text reveal" style="max-width: 600px;">
+                حفل شركاء لحي حراء الثقافي 1445 هـ
+              </h2>
+
+            </div>
+            <div class="d-flex flex-column align-items-end gap-3 reveal">
+              <span class="project__entity reveal">الجهة الشريكة</span>
+              <img style="width: 100px;" class="project__entity-logo reveal" src="imgs/al-yamama-logo.svg" alt="al-yamama logo">
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-12 mb-4 reveal">
+              <div class="video-card w-100">
+                <img class="video-card__img" src="imgs/image.png" alt="الفيلم الوثائقي">
+                <div class="video-card__body">
+                  <button data-source="https://youtu.be/fcafvQYQIsY" data-bs-toggle="modal" data-bs-target="#videoModal" class="btn video-card__icon" title="تشغيل الفديو">
+                    <svg width="1.2rem" height="1.2rem" viewBox="0 0 29 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M5.72715 0.805825C2.92237 -0.78412 0.648438 0.518382 0.648438 3.71272V27.2855C0.648438 30.483 2.92237 31.7839 5.72715 30.1954L26.5761 18.3793C29.3818 16.7888 29.3818 14.2119 26.5761 12.6218L5.72715 0.805825Z" fill="white"/>
+                      </svg>
+                  </button>
+                  <h2 class="video-card__title">الفيلم الوثائقي</h2>
+                </div>
+              </div>
+            </div>
+            {{#each gridItems}}
+            <div class="col-lg-4 reveal">
+              <div class="img-card">
+                <img class="img-card__img" src="imgs/image.png" data-imagebox="single"
+                data-imagebox-src="/imgs/image.png" alt="image">
+              </div>
+            </div>
+            {{/each}}
+          </div>
+        </div>
+      </section>
+    </div>
+
+  </main>
+
+  <div class="modal custom-modal fade" id="videoModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h2 class="modal-title h5 text-black">الفيلم الوثائقي</h2>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body pt-0 pb-4">
+          <div class="video-player-container">
+            <!-- <div class="video-player-overlay"></div> -->
+            <video
+            id="videoPlayer"
+            class="video-js vjs-default-skin"
+            controls
+            width="100%" height="100%"
+            data-setup='{ "techOrder": ["youtube"], "sources": [{ "type": "video/youtube", "src": ""}] }'
+            >
+            </video>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  {{> _footer }}
+  {{> _tail }}
+
+  <script src="vendor/videojs/video.min.js"></script>
+  <script src="vendor/videojs/Youtube.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/tobiasroeder/imagebox@1.3.1/dist/imagebox.min.js"></script>
+
+  <script>
+    var player = videojs('videoPlayer');
+
+    function updateVideoSource(source) {
+      player.src({ src: source, type: 'video/youtube' });
+      player.autoplay(true);
+      player.play();
+    }
+
+    var modalNode = document.querySelector('.custom-modal')
+    if(modalNode) {
+      modalNode.addEventListener('show.bs.modal', (event) => {
+        var triggerButton = event.relatedTarget;
+        var videoSource = triggerButton.getAttribute('data-source');
+
+        if(videoSource) {
+          updateVideoSource(videoSource);
+        }
+      });
+
+      modalNode.addEventListener('hide.bs.modal', (event) => {
+        player.pause();
+        player.currentTime(0);
+      });
+    }
+
+    imagebox.options({
+      info: false,
+      swipeToChange: true,
+      swipeToClose: true,
+      closeEverywhere: true,
+      keyControls: true,
+      htmlCaption: true,
+    });
+  </script>
+
+  </body>
+</html>

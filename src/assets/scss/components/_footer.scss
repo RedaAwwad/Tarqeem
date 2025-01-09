@@ -1,0 +1,36 @@
+@use '../variables' as *;
+
+.footer {
+    position: relative;
+    background-color: var(--mainColor);
+    color: $white;
+    overflow: hidden;
+
+    &__link {
+      display: inline-flex !important;
+      align-items: center;
+      gap: 10px;
+      padding-top: 5px;
+      padding-bottom: 5px;
+      text-decoration: none;
+      color: $white;
+      transition: color 300ms ease-in-out;
+      color: $secondaryColor;
+
+      &:is(a):hover {
+        color: $white;
+      }
+    }
+
+    .social-linkedin {
+      width: 33px;
+      height: 33px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .copyright {
+      color: $secondaryColor;
+    }
+  }
