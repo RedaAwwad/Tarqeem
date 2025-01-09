@@ -1,28 +1,29 @@
 // Import Base file
-// import 'virtual:svg-icons-register';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import '@/assets/css/style.css';
 import '@/assets/scss/main.scss';
-import Swiper from 'swiper';
-import { Navigation, Pagination } from 'swiper/modules';
-import 'swiper/css';
-import 'swiper/css/navigation';
-import 'swiper/css/pagination';
-// import * as bootstrap from 'bootstrap'
 import { Modal } from 'bootstrap';
-// import scrollIntoView from 'scroll-into-view';
+// import Scrollbar from 'smooth-scrollbar';
+
+
 
 $(function () {
     setTimeout(function () {
-        $('#preloader').addClass('hidden');
-        // $('body').removeClass('overflow-hidden');
-
         reveal();
 
-        if(window.innerWidth < 768) {
-            reveal('.card-controller');
-        }
-    }, 1000);
+        // const bodyScrollbar = Scrollbar.init(document.querySelector('#body-scrollbar'));
+        // bodyScrollbar.addListener((status) => {
+        //     console.log(status);
+        //     reveal();
+        //     makeNavbarFixed();
+        // });
+
+        document.addEventListener("scroll", function () {
+            reveal();
+            makeNavbarFixed();
+        });
+
+    }, 0);
 
     // init bootstrap modals
     Array.from(document.querySelectorAll('.custom-modal')).forEach(modalNode => {
@@ -78,31 +79,26 @@ $(function () {
         }
     }
 
-    window.addEventListener("scroll", function () {
-        reveal();
-        makeNavbarFixed();
-
-        if(window.innerWidth < 768) {
-            reveal('.card-controller');
-        }
-    });
-
     makeNavbarFixed();
 
-  const cursorDot = document.getElementById('cursorDot')
-  const cursorOutline = document.getElementById('cursorOutline')
+    window.addEventListener('mousemove', initCustomCursor)
+    // document.querySelector('.scroll-content').addEventListener('mousemove', initCustomCursor)
+    function initCustomCursor(e) {
+        // console.log(e.clientX);
 
-  window.addEventListener('mousemove', function(e) {
-    const posX = e.clientX;
-    const posY = e.clientY;
+        const cursorDot = document.getElementById('cursorDot')
+        const cursorOutline = document.getElementById('cursorOutline')
 
-    cursorDot.style.left = `${posX}px`
-    cursorDot.style.top = `${posY}px`
+        const posX = e.clientX;
+        const posY = e.clientY;
 
-    cursorOutline.animate({
-      left: `${posX}px`,
-      top: `${posY}px`,
-    }, {duration: 500, fill: 'forwards'})
-  })
+        cursorDot.style.left = `${posX}px`
+        cursorDot.style.top = `${posY}px`
+
+        cursorOutline.animate({
+        left: `${posX}px`,
+        top: `${posY}px`,
+        }, {duration: 500, fill: 'forwards'})
+    }
 });
 

@@ -4,7 +4,8 @@
 <link href="vendor/videojs/video.min.css" rel="stylesheet" />
 </head>
 
-<body class="page">
+<body id="body-scrollbar" class="page">
+  <div >
   <div id="cursorDot" class="cursor-dot"></div>
   <div id="cursorOutline" class="cursor-outline"></div>
 
@@ -15,13 +16,13 @@
         {{> _inner_navbar }}
 
         <div class="row">
-          <div class="col-lg-7 mb-5 mb-lg-0 pb-4 pb-lg-0">
+          <div class="col-lg-7 mb-5 mb-lg-0 pb-4 pb-lg-0 pt-sm-4">
             <div class="hero-right-grid px-3 px-lg-0 align-items-center align-items-lg-start text-center text-lg-end">
               <h1 class="hero__title reveal">
-                <span>مشاريع وخدمات الحج </span>
+                مشاريع وخدمات الحج 
               </h1>
               <h2 class="hero__subtitle reveal">ترقيم للحلول الإبداعية </h2>
-              <p class="zimam-page__text reveal" style="max-width: 600px;">
+              <p class="zimam-page__text mb-0 reveal" style="max-width: 600px;">
                 موسم حج 2024 - 1445 هـ
               </p>
             </div>
@@ -416,6 +417,7 @@
   </div>
 
   {{> _footer }}
+  </div>
   {{> _tail }}
 
   <script src="vendor/slick/slick.min.js"></script>
