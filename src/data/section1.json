@@ -1,0 +1,20 @@
+[
+  {
+    "id": 1,
+    "title": "قصة من الميدان",
+    "image": "imgs/image.png",
+    "video": "https://youtu.be/PNbIoAOg9iA"
+  },
+  {
+    "id": 2,
+    "title": "قصة عبير",
+    "image": "imgs/image-2.png",
+    "video": "https://youtu.be/8GU08tZlixg"
+  },
+  {
+    "id": 3,
+    "title": "كلكم كفى ووفى",
+    "image": "imgs/image-3.png",
+    "video": "https://www.youtube.com/watch?v=NuOnN_Re53I"
+  }
+]

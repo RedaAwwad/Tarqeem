@@ -1,0 +1,20 @@
+[
+  {
+    "id": 1,
+    "title": "فعاليات إستقبال الحجاج",
+    "image": "imgs/image-4-1.png",
+    "video": "https://www.youtube.com/watch?v=sSM0ENjqZWA&t=22s"
+  },
+  {
+    "id": 2,
+    "title": "الأوبريت",
+    "image": "imgs/image-4-2.png",
+    "video": "https://www.youtube.com/watch?v=OVWtzWMveHc"
+  },
+  {
+    "id": 3,
+    "title": "الكليب",
+    "image": "imgs/image-4-3.png",
+    "video": "https://youtu.be/_N3482T0_NI"
+  }
+]

@@ -4,8 +4,8 @@
 <link href="vendor/videojs/video.min.css" rel="stylesheet" />
 </head>
 
-<body id="body-scrollbar" class="page">
-  <div >
+<body class="page">
+  <div class="overflow-hidden">
   <div id="cursorDot" class="cursor-dot"></div>
   <div id="cursorOutline" class="cursor-outline"></div>
 
@@ -18,18 +18,18 @@
         <div class="row">
           <div class="col-lg-7 mb-5 mb-lg-0 pb-4 pb-lg-0 pt-sm-4">
             <div class="hero-right-grid px-3 px-lg-0 align-items-center align-items-lg-start text-center text-lg-end">
-              <h1 class="hero__title reveal">
+              <h1 class="hero__title mb-3 font-bold reveal">
                 مشاريع وخدمات الحج 
               </h1>
-              <h2 class="hero__subtitle reveal">ترقيم للحلول الإبداعية </h2>
-              <p class="zimam-page__text mb-0 reveal" style="max-width: 600px;">
+              <h2 class="hero__subtitle mb-4 font-bold reveal">ترقيم للحلول الإبداعية </h2>
+              <p class="hero__text mb-0 font-light reveal" style="max-width: 600px;">
                 موسم حج 2024 - 1445 هـ
               </p>
             </div>
           </div>
           <div class="col-lg-5">
             <div class="hero-left-grid px-3 px-lg-0 align-items-center align-items-lg-start text-center text-lg-end reveal">
-              <button data-source="https://youtu.be/fcafvQYQIsY" data-bs-toggle="modal" data-bs-target="#videoModal" class="btn btn__play pulse" title="تشغيل فديو الانترو">
+              <button data-source="https://www.youtube.com/watch?v=XuOhTNpLMVo" data-title="الفيلم الوثائقي" data-bs-toggle="modal" data-bs-target="#videoModal" class="btn btn__play pulse" title="تشغيل فديو الانترو">
                 <svg width="25" height="25" viewBox="0 0 29 31" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M5.72715 0.805825C2.92237 -0.78412 0.648438 0.518382 0.648438 3.71272V27.2855C0.648438 30.483 2.92237 31.7839 5.72715 30.1954L26.5761 18.3793C29.3818 16.7888 29.3818 14.2119 26.5761 12.6218L5.72715 0.805825Z" fill="white"/>
                   </svg>
@@ -71,8 +71,8 @@
               </button>
             </div>
           </div>
-          <div dir="rtl" class="swiper features-slider reveal">
-            {{#each items}}
+          <div dir="rtl" class="features-slider reveal">
+            {{#each features}}
             <div class="px-2">
               <div class="feature-card">
                 <div class="feature-card__icon">
@@ -107,10 +107,8 @@
                     </svg>
                 </div>
                 <div class="feature-card__body">
-                  <h2 class="feature-card__title">إدارة الفعاليات
-                    والترفيه</h2>
-                    <p class="feature-card__text">نعمل على تخطيط وتسويق وإدارة الفعاليات، ونجذب الأفراد والمجتمعات ليعيشوا تجربة فريدة، من خلال الأنشطة الترفيهية والمعارض والمؤتمرات والندوات والحفلات وغيرها.
-                    </p>
+                  <h2 class="feature-card__title">{{ title }}</h2>
+                    <p class="feature-card__text">{{ desc }}</p>
                 </div>
               </div>
             </div>
@@ -125,7 +123,7 @@
           <div class="d-flex flex-column flex-md-row align-items-start align-items-md-center justify-content-between mb-5 gap-2">
             <div class="d-inline-flex flex-column reveal">
               <h2 class="heading__title reveal">أبرز المشاريع</h2>
-              <h2 class="heading__text reveal" style="max-width: 400px;">
+              <h2 class="heading__text reveal" style="max-width: 450px;">
                 تغطية مشروع الرقابة الميدانية على بطاقة نسك في موسم حج 1445 هـ
               </h2>
 
@@ -137,17 +135,17 @@
           </div>
 
           <div class="row justify-content-center">
-            {{#each gridItems}}
+            {{#each section1}}
             <div class="col-lg-4 col-md-6 reveal mb-4">
               <div class="video-card w-100">
-                <img class="video-card__img" src="imgs/image.png" alt="الفيلم الوثائقي">
+                <img class="video-card__img" src="{{image}}" alt="{{title}}">
                 <div class="video-card__body">
-                  <button data-source="https://youtu.be/fcafvQYQIsY" data-bs-toggle="modal" data-bs-target="#videoModal" class="btn video-card__icon pulse" title="تشغيل الفديو">
+                  <button data-source="{{video}}" data-title="{{title}}" data-bs-toggle="modal" data-bs-target="#videoModal" class="btn video-card__icon pulse" title="تشغيل الفديو">
                     <svg width="1.2rem" height="1.2rem" viewBox="0 0 29 31" fill="none" xmlns="http://www.w3.org/2000/svg">
                       <path d="M5.72715 0.805825C2.92237 -0.78412 0.648438 0.518382 0.648438 3.71272V27.2855C0.648438 30.483 2.92237 31.7839 5.72715 30.1954L26.5761 18.3793C29.3818 16.7888 29.3818 14.2119 26.5761 12.6218L5.72715 0.805825Z" fill="white"/>
                       </svg>
                   </button>
-                  <h2 class="video-card__title">الفيلم الوثائقي</h2>
+                  <h2 class="video-card__title">{{title}}</h2>
                 </div>
               </div>
             </div>
@@ -174,9 +172,9 @@
           <div class="row">
             <div class="col-12 mb-4 reveal">
               <div class="video-card w-100">
-                <img class="video-card__img" src="imgs/image.png" alt="الفيلم الوثائقي">
+                <img class="video-card__img" src="imgs/image-4.webp" alt="الفيلم الوثائقي">
                 <div class="video-card__body">
-                  <button data-source="https://youtu.be/fcafvQYQIsY" data-bs-toggle="modal" data-bs-target="#videoModal" class="btn video-card__icon pulse" title="تشغيل الفديو">
+                  <button data-source="https://www.youtube.com/watch?v=M20eQdLdep0" data-title="الفيلم الوثائقي" data-bs-toggle="modal" data-bs-target="#videoModal" class="btn video-card__icon pulse" title="تشغيل الفديو">
                     <svg width="1.2rem" height="1.2rem" viewBox="0 0 29 31" fill="none" xmlns="http://www.w3.org/2000/svg">
                       <path d="M5.72715 0.805825C2.92237 -0.78412 0.648438 0.518382 0.648438 3.71272V27.2855C0.648438 30.483 2.92237 31.7839 5.72715 30.1954L26.5761 18.3793C29.3818 16.7888 29.3818 14.2119 26.5761 12.6218L5.72715 0.805825Z" fill="white"/>
                       </svg>
@@ -185,11 +183,10 @@
                 </div>
               </div>
             </div>
-            {{#each items}}
+            {{#each masha3rImages}}
             <div class="col-lg-4 col-md-6 reveal mb-4">
               <div class="img-card">
-                <img class="img-card__img" src="imgs/image.png" data-imagebox="single"
-                data-imagebox-src="/imgs/image.png" alt="image">
+                <img class="img-card__img" src="{{image}}" alt="image">
               </div>
             </div>
             {{/each}}
@@ -201,7 +198,7 @@
         <div class="container-xl">
           <div class="d-flex flex-column flex-md-row align-items-start align-items-md-center justify-content-between mb-5 gap-2">
             <div class="d-inline-flex flex-column reveal">
-              <h2 class="heading__text reveal" style="max-width: 400px;">
+              <h2 class="heading__text reveal" style="max-width: 450px;">
                 مشارق | المحتوى الإبداعي 1444 هـ
               </h2>
 
@@ -213,21 +210,23 @@
           </div>
 
           <div class="row justify-content-center">
-            {{#each gridItems}}
+            {{#each mashareqItems}}
             <div class="col-lg-4 col-md-6 reveal">
               <div class="video-card w-100 reveal">
-                <img class="video-card__img" src="imgs/image.png" alt="إشراقة جديدة">
+                <img class="video-card__img" src="{{image}}" alt="{{title}}">
                 <div class="video-card__body">
-                  <button data-source="https://youtu.be/fcafvQYQIsY" data-bs-toggle="modal" data-bs-target="#videoModal" class="btn video-card__icon pulse" title="تشغيل الفديو">
+                  <button data-source="{{video}}" data-title="{{title}}" data-bs-toggle="modal" data-bs-target="#videoModal" class="btn video-card__icon pulse" title="تشغيل الفديو">
                     <svg width="1.2rem" height="1.2rem" viewBox="0 0 29 31" fill="none" xmlns="http://www.w3.org/2000/svg">
                       <path d="M5.72715 0.805825C2.92237 -0.78412 0.648438 0.518382 0.648438 3.71272V27.2855C0.648438 30.483 2.92237 31.7839 5.72715 30.1954L26.5761 18.3793C29.3818 16.7888 29.3818 14.2119 26.5761 12.6218L5.72715 0.805825Z" fill="white"/>
                       </svg>
                   </button>
-                  <h2 class="video-card__title">إشراقة جديدة</h2>
+                  <h2 class="video-card__title">{{title}}</h2>
                 </div>
               </div>
               <div class="py-4 reveal">
-                <img class="w-100" src="imgs/f-1.svg" alt="">
+                <a href="{{bottom_url}}" class="btn p-0">
+                  <img class="w-100" src="{{bottom_image}}" alt="{{title}}">
+                </a>
               </div>
             </div>
             {{/each}}
@@ -239,7 +238,7 @@
         <div class="container-xl">
           <div class="d-flex flex-column flex-md-row align-items-start align-items-md-center justify-content-between mb-5 gap-2">
             <div class="d-inline-flex flex-column reveal">
-              <h2 class="heading__text reveal" style="max-width: 600px;">
+              <h2 class="heading__text reveal" style="max-width: 650px;">
                 فعاليات إستقبال وتوديع ضيوف الرحمن 1444 - 1445 هـ
               </h2>
 
@@ -251,17 +250,17 @@
           </div>
 
           <div class="row justify-content-center">
-            {{#each gridItems}}
+            {{#each events}}
             <div class="col-lg-4 col-md-6 reveal mb-4">
               <div class="video-card w-100">
-                <img class="video-card__img" src="imgs/image.png" alt="فعاليات إستقبال الحجاج">
+                <img class="video-card__img" src="{{ image }}" alt="{{ title }}">
                 <div class="video-card__body">
-                  <button data-source="https://youtu.be/fcafvQYQIsY" data-bs-toggle="modal" data-bs-target="#videoModal" class="btn video-card__icon pulse" title="تشغيل الفديو">
+                  <button data-source="{{ video }}" data-title="{{ title }}" data-bs-toggle="modal" data-bs-target="#videoModal" class="btn video-card__icon pulse" title="تشغيل الفديو">
                     <svg width="1.2rem" height="1.2rem" viewBox="0 0 29 31" fill="none" xmlns="http://www.w3.org/2000/svg">
                       <path d="M5.72715 0.805825C2.92237 -0.78412 0.648438 0.518382 0.648438 3.71272V27.2855C0.648438 30.483 2.92237 31.7839 5.72715 30.1954L26.5761 18.3793C29.3818 16.7888 29.3818 14.2119 26.5761 12.6218L5.72715 0.805825Z" fill="white"/>
                       </svg>
                   </button>
-                  <h2 class="video-card__title">فعاليات إستقبال الحجاج</h2>
+                  <h2 class="video-card__title">{{ title }}</h2>
                 </div>
               </div>
             </div>
@@ -274,7 +273,7 @@
         <div class="container-xl">
           <div class="d-flex flex-column flex-md-row align-items-start align-items-md-center justify-content-between mb-5 gap-2">
             <div class="d-inline-flex flex-column reveal">
-              <h2 class="heading__text reveal" style="max-width: 600px;">
+              <h2 class="heading__text reveal" style="max-width: 650px;">
                 محتوى مركز مكارم لإثراء تجربة ضيوف الرحمن  1445 هـ
               </h2>
 
@@ -286,17 +285,17 @@
           </div>
 
           <div class="row justify-content-center">
-            {{#each gridItems}}
+            {{#each makaremCenter}}
             <div class="col-lg-4 col-md-6 reveal mb-4">
               <div class="video-card w-100">
-                <img class="video-card__img" src="imgs/image.png" alt="معرض قصة الحج">
+                <img class="video-card__img" src="{{image}}" alt="{{title}}">
                 <div class="video-card__body">
-                  <button data-source="https://youtu.be/fcafvQYQIsY" data-bs-toggle="modal" data-bs-target="#videoModal" class="btn video-card__icon pulse" title="تشغيل الفديو">
+                  <button data-source="{{video}}" data-title="{{title}}" data-bs-toggle="modal" data-bs-target="#videoModal" class="btn video-card__icon pulse" title="تشغيل الفديو">
                     <svg width="1.2rem" height="1.2rem" viewBox="0 0 29 31" fill="none" xmlns="http://www.w3.org/2000/svg">
                       <path d="M5.72715 0.805825C2.92237 -0.78412 0.648438 0.518382 0.648438 3.71272V27.2855C0.648438 30.483 2.92237 31.7839 5.72715 30.1954L26.5761 18.3793C29.3818 16.7888 29.3818 14.2119 26.5761 12.6218L5.72715 0.805825Z" fill="white"/>
                       </svg>
                   </button>
-                  <h2 class="video-card__title">معرض قصة الحج</h2>
+                  <h2 class="video-card__title">{{title}}</h2>
                 </div>
               </div>
             </div>
@@ -324,9 +323,9 @@
           <div class="row">
             <div class="col-12 mb-4 reveal">
               <div class="video-card w-100">
-                <img class="video-card__img" src="imgs/image.png" alt="الفيلم الوثائقي">
+                <img class="video-card__img" src="imgs/hotel.webp" alt="الفيلم الوثائقي">
                 <div class="video-card__body">
-                  <button data-source="https://youtu.be/fcafvQYQIsY" data-bs-toggle="modal" data-bs-target="#videoModal" class="btn video-card__icon pulse" title="تشغيل الفديو">
+                  <button data-source="https://youtu.be/ojbO3oYqi7U" data-title="الفيلم الوثائقي" data-bs-toggle="modal" data-bs-target="#videoModal" class="btn video-card__icon pulse" title="تشغيل الفديو">
                     <svg width="1.2rem" height="1.2rem" viewBox="0 0 29 31" fill="none" xmlns="http://www.w3.org/2000/svg">
                       <path d="M5.72715 0.805825C2.92237 -0.78412 0.648438 0.518382 0.648438 3.71272V27.2855C0.648438 30.483 2.92237 31.7839 5.72715 30.1954L26.5761 18.3793C29.3818 16.7888 29.3818 14.2119 26.5761 12.6218L5.72715 0.805825Z" fill="white"/>
                       </svg>
@@ -335,53 +334,10 @@
                 </div>
               </div>
             </div>
-            {{#each items}}
+            {{#each hotelsImages}}
             <div class="col-lg-4 col-md-6 reveal mb-4">
               <div class="img-card">
-                <img class="img-card__img" src="imgs/image.png" data-imagebox="single"
-                data-imagebox-src="/imgs/image.png" alt="image">
-              </div>
-            </div>
-            {{/each}}
-          </div>
-        </div>
-      </section>
-
-      <!-- last section -->
-      <section class="section-space">
-        <div class="container-xl">
-          <div class="d-flex flex-column flex-md-row align-items-start align-items-md-center justify-content-between mb-5 gap-2">
-            <div class="d-inline-flex flex-column reveal">
-              <h2 class="heading__text reveal" style="max-width: 600px;">
-                حفل شركاء لحي حراء الثقافي 1445 هـ
-              </h2>
-
-            </div>
-            <div class="d-flex flex-column align-items-end gap-3 reveal">
-              <span class="project__entity reveal">الجهة الشريكة</span>
-              <img style="width: 100px;" class="project__entity-logo reveal" src="imgs/al-yamama-logo.svg" alt="al-yamama logo">
-            </div>
-          </div>
-
-          <div class="row justify-content-center">
-            <div class="col-12 mb-4 reveal">
-              <div class="video-card w-100">
-                <img class="video-card__img" src="imgs/image.png" alt="الفيلم الوثائقي">
-                <div class="video-card__body">
-                  <button data-source="https://youtu.be/fcafvQYQIsY" data-bs-toggle="modal" data-bs-target="#videoModal" class="btn video-card__icon pulse" title="تشغيل الفديو">
-                    <svg width="1.2rem" height="1.2rem" viewBox="0 0 29 31" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M5.72715 0.805825C2.92237 -0.78412 0.648438 0.518382 0.648438 3.71272V27.2855C0.648438 30.483 2.92237 31.7839 5.72715 30.1954L26.5761 18.3793C29.3818 16.7888 29.3818 14.2119 26.5761 12.6218L5.72715 0.805825Z" fill="white"/>
-                      </svg>
-                  </button>
-                  <h2 class="video-card__title">الفيلم الوثائقي</h2>
-                </div>
-              </div>
-            </div>
-            {{#each gridItems}}
-            <div class="col-lg-4 col-md-6 reveal mb-4">
-              <div class="img-card">
-                <img class="img-card__img" src="imgs/image.png" data-imagebox="single"
-                data-imagebox-src="/imgs/image.png" alt="image">
+                <img class="img-card__img" src="{{image}}" alt="image">
               </div>
             </div>
             {{/each}}
@@ -396,7 +352,7 @@
     <div class="modal-dialog modal-dialog-centered">
       <div class="modal-content">
         <div class="modal-header">
-          <h2 class="modal-title h5 text-black">الفيلم الوثائقي</h2>
+          <h2 id="modalTitle" class="modal-title h5 text-black"></h2>
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body pt-0 pb-4">
@@ -439,6 +395,11 @@
         modalNode.addEventListener('show.bs.modal', (event) => {
           var triggerButton = event.relatedTarget;
           var videoSource = triggerButton.getAttribute('data-source');
+          var videoTitle = triggerButton.getAttribute('data-title');
+
+          if(videoTitle) {
+            $('#modalTitle').text(videoTitle);
+          }
 
           if(videoSource) {
             updateVideoSource(videoSource);
@@ -448,6 +409,7 @@
         modalNode.addEventListener('hide.bs.modal', (event) => {
           player.pause();
           player.currentTime(0);
+          $('#modalTitle').text('');
         });
       }
       // features-slider
@@ -462,22 +424,6 @@
         nextArrow: '#nextFeatureNavigator',
         prevArrow: '#prevFeatureNavigator',
         responsive: [
-          // {
-          //   breakpoint: 1,
-          //   settings: {
-          //     slidesToShow: 1,
-          //     slidesToScroll: 1,
-          //     centerMode: false
-          //   }
-          // },
-          // {
-          //   breakpoint: 580,
-          //   settings: {
-          //     slidesToShow: 1,
-          //     slidesToScroll: 1,
-          //     centerMode: true
-          //   }
-          // },
           {
             breakpoint: 685,
             settings: {

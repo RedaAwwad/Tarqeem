@@ -10,6 +10,18 @@
   font-weight: 400;
 }
 
+@font-face {
+  font-family: 'Montserrat-Arabic-Bold';
+  src: url(/fonts/montserrat-arabic/Montserrat-Arabic-Bold.ttf);
+  font-weight: 4700;
+}
+
+@font-face {
+  font-family: 'Montserrat-Arabic-Light';
+  src: url(/fonts/montserrat-arabic/Montserrat-Arabic-Light.ttf);
+  font-weight: 4700;
+}
+
 html {
   scroll-behavior: smooth;
 }
@@ -28,6 +40,14 @@ body {
     background-color: $white;
   }
 
+  .font-bold {
+    font-family: 'Montserrat-Arabic-Bold', 'Tahoma', sans-serif !important;
+  }
+
+  .font-light {
+    font-family: 'Montserrat-Arabic-Light', 'Tahoma', sans-serif !important;
+  }
+
   .cursor-outline {
     width: 50px;
     height: 50px;
@@ -40,13 +60,17 @@ body {
 
   .cursor-dot,
   .cursor-outline {
-    position: absolute;
+    position: fixed;
     top: -100%;
     left: 0;
     transform: translate(-50%, -50%);
     border-radius: 50%;
     z-index: 1200;
     pointer-events: none;
+
+    @media (hover: none) and (pointer: coarse) {
+      display: none;
+    }
   }
 
   pre {
@@ -150,7 +174,8 @@ body {
     flex-direction: column;
     gap: 10px;
     font-size: 3rem;
-    font-weight: bold;
+    font-weight: 700;
+    font-family: 'Montserrat-Arabic-Bold', Tahoma, sans-serif;
     line-height: 1.8;
     // margin-bottom: 1rem;
     color: $white;
@@ -163,6 +188,12 @@ body {
   &__subtitle {
     font-size: 2rem;
     font-weight: bold;
+    color: $white;
+  }
+
+  &__text {
+    font-size: 1.43rem;
+    font-weight: 300;
     color: $white;
   }
 }
@@ -519,6 +550,7 @@ body {
     font-weight: 700;
     line-height: 47.43px;
     margin-bottom: 1.5rem;
+    font-family: 'Montserrat-Arabic-Bold', 'Tahoma', sans-serif !important;
   }
 
   &__subtitle {
@@ -534,6 +566,7 @@ body {
     font-size: 1.5rem;
     line-height: 2;
     color: $white;
+    font-family: 'Montserrat-Arabic-Bold', 'Tahoma', sans-serif !important;
   }
 }
 
