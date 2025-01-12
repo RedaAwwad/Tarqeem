@@ -6,20 +6,23 @@
 
 @font-face {
   font-family: 'Montserrat-Arabic';
-  src: url(/fonts/montserrat-arabic/Montserrat-Arabic-Regular.ttf);
+  // src: url(fonts/montserrat-arabic/Montserrat-Arabic-Regular.ttf);
+  src: url('https://trqem.sa/wp-content/uploads/ArbFONTS-Montserrat-Arabic-Regular.ttf') format('truetype');
   font-weight: 400;
 }
 
 @font-face {
   font-family: 'Montserrat-Arabic-Bold';
-  src: url(/fonts/montserrat-arabic/Montserrat-Arabic-Bold.ttf);
-  font-weight: 4700;
+  // src: url(fonts/montserrat-arabic/Montserrat-Arabic-Bold.ttf);
+  src: url('https://trqem.sa/wp-content/uploads/ArbFONTS-Montserrat-Arabic-Bold.ttf') format('truetype');
+  font-weight: 700;
 }
 
 @font-face {
   font-family: 'Montserrat-Arabic-Light';
-  src: url(/fonts/montserrat-arabic/Montserrat-Arabic-Light.ttf);
-  font-weight: 4700;
+  // src: url(fonts/montserrat-arabic/Montserrat-Arabic-Light.ttf);
+  src: url('https://trqem.sa/wp-content/uploads/ArbFONTS-Montserrat-Arabic-Light.ttf') format('truetype');
+  font-weight: 300;
 }
 
 html {
