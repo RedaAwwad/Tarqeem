@@ -5,7 +5,8 @@
     "image": "imgs/image-3-1.png",
     "video": "https://www.youtube.com/watch?v=zlufVyIeM7I",
     "bottom_url": "https://drive.google.com/file/d/13MHd0oVDAZwuJf8aHaAxZ3usy2vkiqun/view?usp=sharing",
-    "bottom_image": "imgs/f-1.svg"
+    "bottom_image": "imgs/f-1.svg",
+    "pdf": "pdf/mashareq-ar.pdf"
   },
   {
     "id": 2,
@@ -13,7 +14,8 @@
     "image": "imgs/image-3-2.png",
     "video": "https://www.youtube.com/watch?v=eweuhaTZKl0",
     "bottom_url": "https://drive.google.com/file/d/1GL8ZqMOtexUOMeyySDkHrXW9AggEjqrA/view?usp=sharing",
-    "bottom_image": "imgs/f-2.svg"
+    "bottom_image": "imgs/f-2.svg",
+    "pdf": "pdf/mashareq-en.pdf"
   },
   {
     "id": 3,
@@ -21,6 +23,7 @@
     "image": "imgs/image-3-3.png",
     "video": "https://www.youtube.com/watch?v=vTgDDi8jnrU",
     "bottom_url": "https://drive.google.com/file/d/1fHOzzB2aXW1pNv1ZZIYCQruFtHmabkNG/view",
-    "bottom_image": "imgs/f-3.svg"
+    "bottom_image": "imgs/f-3.svg",
+    "pdf": "pdf/mashareq-news.pdf"
   }
 ]

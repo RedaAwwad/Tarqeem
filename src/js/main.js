@@ -3,9 +3,6 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import '@/assets/css/style.css';
 import '@/assets/scss/main.scss';
 import { Modal } from 'bootstrap';
-// import Scrollbar from 'smooth-scrollbar';
-
-
 
 $(function () {
     setTimeout(function () {
